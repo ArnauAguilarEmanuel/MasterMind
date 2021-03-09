@@ -11,6 +11,7 @@
 		EFB6606D25F7EDC900EB4CB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6606C25F7EDC900EB4CB9 /* ContentView.swift */; };
 		EFB6606F25F7EDCA00EB4CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB6606E25F7EDCA00EB4CB9 /* Assets.xcassets */; };
 		EFB6607225F7EDCA00EB4CB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB6607125F7EDCA00EB4CB9 /* Preview Assets.xcassets */; };
+		EFB6607B25F7EF5900EB4CB9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6607A25F7EF5900EB4CB9 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		EFB6606E25F7EDCA00EB4CB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFB6607125F7EDCA00EB4CB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFB6607325F7EDCA00EB4CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB6607A25F7EF5900EB4CB9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +54,13 @@
 		EFB6606925F7EDC900EB4CB9 /* MasterMind */ = {
 			isa = PBXGroup;
 			children = (
+				EFB6607D25F7EF7900EB4CB9 /* Models */,
 				EFB6606A25F7EDC900EB4CB9 /* MasterMindApp.swift */,
 				EFB6606C25F7EDC900EB4CB9 /* ContentView.swift */,
 				EFB6606E25F7EDCA00EB4CB9 /* Assets.xcassets */,
 				EFB6607325F7EDCA00EB4CB9 /* Info.plist */,
 				EFB6607025F7EDCA00EB4CB9 /* Preview Content */,
+				EFB6607A25F7EF5900EB4CB9 /* ViewModel.swift */,
 			);
 			path = MasterMind;
 			sourceTree = "<group>";
@@ -67,6 +71,13 @@
 				EFB6607125F7EDCA00EB4CB9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EFB6607D25F7EF7900EB4CB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFB6606D25F7EDC900EB4CB9 /* ContentView.swift in Sources */,
+				EFB6607B25F7EF5900EB4CB9 /* ViewModel.swift in Sources */,
 				EFB6606B25F7EDC900EB4CB9 /* MasterMindApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
