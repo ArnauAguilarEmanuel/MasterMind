@@ -14,17 +14,16 @@ struct DayView: View {
     var body: some View {
         VStack{
             HStack{
-                Rectangle().frame(width: 50.0, height: 2.0).foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+                Rectangle().frame(width: 40.0, height: 2.0).foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
                 Text(day.GetDate())
                     .fontWeight(.light)
                     .multilineTextAlignment(.leading)
-                Rectangle().frame(width: 130.0, height: 2.0).foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+                Rectangle().frame(width: 90.0, height: 2.0).foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
             
             }
             ForEach(day.itineraries, id: \.self){ itinerary in
                 ItineraryView(title: itinerary.title, description: itinerary.description, imageName: itinerary.imageName)
-            }
-            
+            }            
         }
     }
 }

@@ -11,12 +11,13 @@ class ViewModel : ObservableObject {
     @Published var days: [DayModel]
     
     var testItineraries = [
-        ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
+        ItineraryModel(title: "BCN", description: "Road trip to Sagrada Familia", imageName: "SagradaFamilia"),
         ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
         ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
         ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
         ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia")
     ]
+    
     init() {
         
         self.days = [
