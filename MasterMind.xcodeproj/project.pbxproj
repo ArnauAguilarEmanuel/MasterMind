@@ -11,6 +11,7 @@
 		EF19FB6125FA99960003FBC7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6607A25F7EF5900EB4CB9 /* ViewModel.swift */; };
 		EF19FB6325FA99990003FBC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6606C25F7EDC900EB4CB9 /* ContentView.swift */; };
 		EF19FB6625FA9F7E0003FBC7 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19FB6525FA9F7E0003FBC7 /* DayView.swift */; };
+		EF19FB6925FAA3260003FBC7 /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19FB6825FAA3260003FBC7 /* DayModel.swift */; };
 		EFB6606B25F7EDC900EB4CB9 /* MasterMindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6606A25F7EDC900EB4CB9 /* MasterMindApp.swift */; };
 		EFB6606F25F7EDCA00EB4CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB6606E25F7EDCA00EB4CB9 /* Assets.xcassets */; };
 		EFB6607225F7EDCA00EB4CB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB6607125F7EDCA00EB4CB9 /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		EF19FB5C25FA96040003FBC7 /* ItinerariModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinerariModel.swift; sourceTree = "<group>"; };
 		EF19FB6525FA9F7E0003FBC7 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		EF19FB6825FAA3260003FBC7 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		EFB6606725F7EDC900EB4CB9 /* MasterMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB6606A25F7EDC900EB4CB9 /* MasterMindApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterMindApp.swift; sourceTree = "<group>"; };
 		EFB6606C25F7EDC900EB4CB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				EF19FB5C25FA96040003FBC7 /* ItinerariModel.swift */,
+				EF19FB6825FAA3260003FBC7 /* DayModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			files = (
 				EFD7827525FA8F5600E790BC /* ItineraryView.swift in Sources */,
 				EF19FB6625FA9F7E0003FBC7 /* DayView.swift in Sources */,
+				EF19FB6925FAA3260003FBC7 /* DayModel.swift in Sources */,
 				EF19FB6325FA99990003FBC7 /* ContentView.swift in Sources */,
 				EFB6606B25F7EDC900EB4CB9 /* MasterMindApp.swift in Sources */,
 				EF19FB6125FA99960003FBC7 /* ViewModel.swift in Sources */,

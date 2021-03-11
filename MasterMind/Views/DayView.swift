@@ -8,24 +8,20 @@
 import SwiftUI
 
 struct DayView: View {
-    var day : Int
-    var month : String
-    var year : Int
     
-    @ObservedObject var viewModel = ViewModel()
+    var day : DayModel
     
     var body: some View {
         VStack{
             HStack{
                 Rectangle().frame(width: 50.0, height: 2.0).foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
-                let date : String = String(day) + "/" + month + "/" + String(year)
-                Text(date)
+                Text(day.GetDate())
                     .fontWeight(.light)
                     .multilineTextAlignment(.leading)
                 Rectangle().frame(width: 130.0, height: 2.0).foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
             
             }
-            ForEach(viewModel.itineraries, id: \.self){ itinerary in
+            ForEach(day.itineraries, id: \.self){ itinerary in
                 ItineraryView(title: itinerary.title, description: itinerary.description, imageName: itinerary.imageName)
             }
             
@@ -35,6 +31,13 @@ struct DayView: View {
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        DayView(day: 0, month: "March", year: 1990)
+        let testItineraries = [
+            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
+            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
+            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
+            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
+            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia")
+        ]
+        DayView(day: DayModel(itineraries: testItineraries, day: 1, month: "March", year: 2020))
     }
 }

@@ -10,11 +10,13 @@ import SwiftUI
 
 
 struct ContentView: View {
-    
+    @ObservedObject var viewModel = ViewModel()
     var body: some View {
-        VStack {
+        List {
             
-            
+            ForEach(viewModel.days, id: \.self){ currentDay in
+                DayView( day: currentDay)
+            }
         }
     }
 }

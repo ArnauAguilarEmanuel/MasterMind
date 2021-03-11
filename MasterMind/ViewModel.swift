@@ -8,15 +8,23 @@ import SwiftUI
 import Foundation
 
 class ViewModel : ObservableObject {
-    @Published var itineraries: [ItineraryModel]
+    @Published var days: [DayModel]
     
+    var testItineraries = [
+        ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
+        ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
+        ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
+        ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
+        ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia")
+    ]
     init() {
-        self.itineraries  = [
-            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
-            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
-            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
-            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
-            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia")
+        
+        self.days = [
+            DayModel(itineraries: testItineraries, day: 1, month: "September", year: 2021),
+            DayModel(itineraries: testItineraries, day: 2, month: "September", year: 2021),
+            DayModel(itineraries: testItineraries, day: 3, month: "September", year: 2021),
+            DayModel(itineraries: testItineraries, day: 4, month: "September", year: 2021),
+            DayModel(itineraries: testItineraries, day: 5, month: "September", year: 2021)
         ]
     }
 }
