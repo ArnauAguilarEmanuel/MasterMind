@@ -12,7 +12,7 @@
 		EFB6606F25F7EDCA00EB4CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB6606E25F7EDCA00EB4CB9 /* Assets.xcassets */; };
 		EFB6607225F7EDCA00EB4CB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB6607125F7EDCA00EB4CB9 /* Preview Assets.xcassets */; };
 		EFB6607B25F7EF5900EB4CB9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6607A25F7EF5900EB4CB9 /* ViewModel.swift */; };
-		EFB6608325F7FF8900EB4CB9 /* GameLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6608225F7FF8900EB4CB9 /* GameLineView.swift */; };
+		EFD7827525FA8F5600E790BC /* ItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7827425FA8F5600E790BC /* ItineraryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		EFB6607125F7EDCA00EB4CB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFB6607325F7EDCA00EB4CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFB6607A25F7EF5900EB4CB9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		EFB6608225F7FF8900EB4CB9 /* GameLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLineView.swift; sourceTree = "<group>"; };
+		EFD7827425FA8F5600E790BC /* ItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				EFB6606C25F7EDC900EB4CB9 /* ContentView.swift */,
-				EFB6608225F7FF8900EB4CB9 /* GameLineView.swift */,
+				EFD7827425FA8F5600E790BC /* ItineraryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,8 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFB6606D25F7EDC900EB4CB9 /* ContentView.swift in Sources */,
-				EFB6608325F7FF8900EB4CB9 /* GameLineView.swift in Sources */,
 				EFB6607B25F7EF5900EB4CB9 /* ViewModel.swift in Sources */,
+				EFD7827525FA8F5600E790BC /* ItineraryView.swift in Sources */,
 				EFB6606B25F7EDC900EB4CB9 /* MasterMindApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
