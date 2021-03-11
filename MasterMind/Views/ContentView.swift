@@ -10,26 +10,16 @@ import SwiftUI
 
 
 struct ContentView: View {
-    var itineraries = [
-        ItineraryView(),
-        ItineraryView(),
-        ItineraryView(),
-        ItineraryView(),
-        ItineraryView()
-    ]
-    
+    @ObservedObject var viewModel = ViewModel()
     var body: some View {
         VStack {
-            ForEach(itineraries, id: \.self){ itinerary in
-                itinerary
+            ForEach(viewModel.itineraries, id: \.self){ itinerary in
+                ItineraryView(title: itinerary.title, description: itinerary.description, imageName: itinerary.imageName)
             }
+            
         }
     }
 }
-
-
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
