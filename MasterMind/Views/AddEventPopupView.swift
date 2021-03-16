@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AddEventPopupView: View {
     
+    @ObservedObject var viewModel : ViewModel
+    
     @State var title: String = "new title"
     @State var description: String = "new description"
     
@@ -40,7 +42,7 @@ struct AddEventPopupView: View {
                     }
                     
                     Button("Add event", action :{
-                        print("T: " + title + "D: " + description)
+                        viewModel.AddNewItineraryToDay(title : title, description: description)
                     }).frame(width: 100, height: 30, alignment: .center)
                     .background(Color.green)
                     .padding(.bottom, 20)
@@ -57,6 +59,6 @@ struct AddEventPopupView: View {
 
 struct AddEventPopupView_Previews: PreviewProvider {
     static var previews: some View {
-        AddEventPopupView()
+        AddEventPopupView(viewModel: ViewModel())
     }
 }
