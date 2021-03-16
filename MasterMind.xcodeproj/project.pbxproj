@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49F75F952601147A00FB70CA /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F75F942601147A00FB70CA /* ButtonView.swift */; };
+		49F75F9826011ADF00FB70CA /* AddEventPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F75F9726011ADF00FB70CA /* AddEventPopupView.swift */; };
 		EF19FB5D25FA96040003FBC7 /* ItinerariModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19FB5C25FA96040003FBC7 /* ItinerariModel.swift */; };
 		EF19FB6125FA99960003FBC7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6607A25F7EF5900EB4CB9 /* ViewModel.swift */; };
 		EF19FB6325FA99990003FBC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6606C25F7EDC900EB4CB9 /* ContentView.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49F75F942601147A00FB70CA /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		49F75F9726011ADF00FB70CA /* AddEventPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventPopupView.swift; sourceTree = "<group>"; };
 		EF19FB5C25FA96040003FBC7 /* ItinerariModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinerariModel.swift; sourceTree = "<group>"; };
 		EF19FB6525FA9F7E0003FBC7 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		EF19FB6825FAA3260003FBC7 /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				EFB6606C25F7EDC900EB4CB9 /* ContentView.swift */,
 				EFD7827425FA8F5600E790BC /* ItineraryView.swift */,
 				EF19FB6525FA9F7E0003FBC7 /* DayView.swift */,
+				49F75F942601147A00FB70CA /* ButtonView.swift */,
+				49F75F9726011ADF00FB70CA /* AddEventPopupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,8 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F75F9826011ADF00FB70CA /* AddEventPopupView.swift in Sources */,
 				EFD7827525FA8F5600E790BC /* ItineraryView.swift in Sources */,
 				EF19FB6625FA9F7E0003FBC7 /* DayView.swift in Sources */,
+				49F75F952601147A00FB70CA /* ButtonView.swift in Sources */,
 				EF19FB6925FAA3260003FBC7 /* DayModel.swift in Sources */,
 				EF19FB6325FA99990003FBC7 /* ContentView.swift in Sources */,
 				EFB6606B25F7EDC900EB4CB9 /* MasterMindApp.swift in Sources */,

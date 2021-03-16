@@ -10,12 +10,20 @@ import SwiftUI
 
 
 struct ContentView: View {
+    
     @ObservedObject var viewModel = ViewModel()
     var body: some View {
-        List {
+        ZStack{
             
-            ForEach(viewModel.days, id: \.self){ currentDay in
-                DayView( day: currentDay, viewModel: viewModel)
+            List {
+                ForEach(viewModel.days, id: \.self){ currentDay in
+                    DayView( day: currentDay, viewModel: viewModel)
+                }
+            }
+            if viewModel.showAddEventPopUp{
+                GeometryReader{_ in
+                    AddEventPopupView()
+                }.background(Color.black.opacity(0.65))
             }
         }
     }

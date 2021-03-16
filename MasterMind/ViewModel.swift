@@ -9,6 +9,7 @@ import Foundation
 
 class ViewModel : ObservableObject {
     @Published var days: [DayModel]
+    @Published var showAddEventPopUp = false
     
     var testItineraries = [
         ItineraryModel(title: "BCN", description: "Road trip to Sagrada Familia", imageName: "SagradaFamilia"),
@@ -31,7 +32,8 @@ class ViewModel : ObservableObject {
     
     func AddItineraryToDay( day : DayModel){
         print("CLICK")
-        day.itineraries.append(ItineraryModel(title: "WORKS", description: "The bosses", imageName: "SagradaFamilia"))
-
+        
+        showAddEventPopUp.toggle()
     }
+    
 }
