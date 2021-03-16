@@ -27,7 +27,7 @@ struct DayView: View {
                     Rectangle().frame(width: 30, height: 2.0).foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
                     ButtonView(label: "+", action: {
                                 self.show.toggle()
-                                viewModel.AddItineraryToDay(day: day)})
+                                viewModel.OpenNewItineraryPopup(day: day)})
                     
                 }
                 ForEach(day.itineraries, id: \.self){ itinerary in

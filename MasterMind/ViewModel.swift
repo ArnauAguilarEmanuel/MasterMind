@@ -30,10 +30,10 @@ class ViewModel : ObservableObject {
         ]
     }
     
-    func AddItineraryToDay( day : DayModel){
-        print("CLICK")
+    func OpenNewItineraryPopup( day : DayModel){
         
         showAddEventPopUp.toggle()
     }
+    
     
 }

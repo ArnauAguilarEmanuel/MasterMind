@@ -8,9 +8,49 @@
 import SwiftUI
 
 struct AddEventPopupView: View {
+    
+    @State var title: String = "new title"
+    @State var description: String = "new description"
+    
     var body: some View {
-        VStack{
-            Text("A la primera")
+        GeometryReader { geometry in
+            ZStack{
+                VStack(alignment: .center){
+                    VStack(alignment: .leading){
+                        Text("Title:")
+                            .padding(.top, 20)
+                        
+                        TextField("title", text: $title)
+                            .padding(.leading, 10)
+                            .frame(width: 160, height: 30, alignment: .leading)
+                            .background(Color.gray)
+                            .cornerRadius(5)
+                            .foregroundColor(.white)
+                            .padding(.bottom, 35.0)
+                        
+                        Text("Description:")
+                        TextField("description", text: $description)
+                            .padding(.leading, 10)
+                            .frame(width: 160, height: 60, alignment: .leading)
+                            .background(Color.gray)
+                            .cornerRadius(5)
+                            .foregroundColor(.white)
+                            .padding(.bottom, 45.0)
+                            
+                    }
+                    
+                    Button("Add event", action :{
+                        print("T: " + title + "D: " + description)
+                    }).frame(width: 100, height: 30, alignment: .center)
+                    .background(Color.green)
+                    .padding(.bottom, 20)
+                    
+                }.padding(.vertical, 10)
+                .padding(.horizontal, 20)
+                .background(Color.white)
+                .cornerRadius(15)
+                .frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            }
         }
     }
 }
