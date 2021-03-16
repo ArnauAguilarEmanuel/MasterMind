@@ -15,7 +15,7 @@ struct ContentView: View {
         List {
             
             ForEach(viewModel.days, id: \.self){ currentDay in
-                DayView( day: currentDay)
+                DayView( day: currentDay, viewModel: viewModel)
             }
         }
     }

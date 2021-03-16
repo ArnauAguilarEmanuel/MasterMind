@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
-struct DayModel: Hashable {
-    var itineraries: [ItineraryModel]
+
+class DayModel : Hashable , ObservableObject{
+    
+    @Published var itineraries: [ItineraryModel]
     var day : Int
     var month : String
     var year : Int
@@ -22,4 +24,18 @@ struct DayModel: Hashable {
     func GetDate() -> String{
         return  String(self.day) + "/" + self.month + "/" + String(self.year)
     }
+}
+
+extension Hashable where Self: AnyObject{
+
+  func hash(into hasher: inout Hasher) {
+     hasher.combine(ObjectIdentifier(self))
+   }
+}
+
+extension Equatable where Self: AnyObject{
+
+   static func ==(lhs: Self, rhs: Self) -> Bool {
+      return lhs === rhs
+   }
 }

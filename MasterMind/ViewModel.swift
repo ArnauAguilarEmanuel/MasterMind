@@ -28,4 +28,10 @@ class ViewModel : ObservableObject {
             DayModel(itineraries: testItineraries, day: 5, month: "September", year: 2021)
         ]
     }
+    
+    func AddItineraryToDay( day : DayModel){
+        print("CLICK")
+        day.itineraries.append(ItineraryModel(title: "WORKS", description: "The bosses", imageName: "SagradaFamilia"))
+
+    }
 }

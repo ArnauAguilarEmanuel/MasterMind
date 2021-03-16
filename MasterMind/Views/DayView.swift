@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DayView: View {
     
-    var day : DayModel
+    @ObservedObject var day : DayModel
+    @ObservedObject var viewModel : ViewModel
     
     var body: some View {
         VStack{
@@ -19,6 +20,9 @@ struct DayView: View {
                     .fontWeight(.light)
                     .multilineTextAlignment(.leading)
                 Rectangle().frame(width: 90.0, height: 2.0).foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+                Button("+"){
+                    viewModel.AddItineraryToDay(day : day)
+                }
             
             }
             ForEach(day.itineraries, id: \.self){ itinerary in
@@ -37,6 +41,6 @@ struct DayView_Previews: PreviewProvider {
             ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
             ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia")
         ]
-        DayView(day: DayModel(itineraries: testItineraries, day: 1, month: "March", year: 2020))
+        DayView(day: DayModel(itineraries: testItineraries, day: 1, month: "March", year: 2020), viewModel: ViewModel())
     }
 }
