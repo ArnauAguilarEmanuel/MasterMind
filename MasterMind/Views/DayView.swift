@@ -19,11 +19,11 @@ struct DayView: View {
             VStack{
                 HStack(){
                     Button("-", action: {
-                            viewModel.OpenNewItineraryPopup(day: day)})
+                            viewModel.OpenRemoveItineraryPopup(day: day)})
                         .foregroundColor(.white)
                     .frame(width: 30, height: 30, alignment: .center)
                     .background(Color.red)
-                        .cornerRadius(8)
+                    .cornerRadius(8)
                     
                     Rectangle().frame(width: 30.0, height: 2.0).foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
                     Text(day.GetDate())
@@ -37,7 +37,7 @@ struct DayView: View {
                         .foregroundColor(.white)
                     .frame(width: 30, height: 30, alignment: .center)
                     .background(Color.green)
-                        .cornerRadius(8)
+                    .cornerRadius(8)
                 }.padding(.vertical, 20)
 
                 ForEach(day.itineraries, id: \.self){ itinerary in

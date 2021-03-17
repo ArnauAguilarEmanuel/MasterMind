@@ -22,19 +22,18 @@ struct RemoveEventPopupView: View {
                         Text("Select an event")
                             .padding(.top, 20)
                             .padding(.bottom, 30)
-                        
-                        
-                        
+                    
                         Text("The selected event will be removed permanently")
                             .padding(.bottom, 20)
                     }
                     
                     Button("Remove", action :{
-                        viewModel.RemoveItineraryToDay()
+                        viewModel.RemoveItineraryToDay(day : viewModel.selectedDay)
                     }).frame(width: 100, height: 30, alignment: .center)
                     .background(Color.red)
-                    .padding(.bottom, 20)
+                    .foregroundColor(.white)
                     .cornerRadius(5)
+                    .padding(.bottom, 20)
                     
                 }.padding(.vertical, 10)
                 .padding(.horizontal, 20)

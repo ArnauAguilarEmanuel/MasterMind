@@ -14,7 +14,7 @@ struct ContentView: View {
     @ObservedObject var viewModel = ViewModel()
     var body: some View {
         ZStack{
-            List {
+            ScrollView {
                 ForEach(viewModel.days, id: \.self){ currentDay in
                     DayView( day: currentDay, viewModel: viewModel)
                 }
@@ -26,7 +26,7 @@ struct ContentView: View {
             }
             else if viewModel.showRemoveEventPopUp{
                 GeometryReader{_ in
-                    AddEventPopupView(viewModel: viewModel)
+                    RemoveEventPopupView(viewModel: viewModel)
                 }.background(Color.black.opacity(0.75))
             }
         }

@@ -49,7 +49,7 @@ class ViewModel : ObservableObject {
         showAddEventPopUp.toggle()
     }
     
-    func RemoveItineraryToDay(){
+    func RemoveItineraryToDay(day : DayModel){
         print("Reomve")
     }
     
