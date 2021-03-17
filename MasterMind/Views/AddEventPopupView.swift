@@ -19,6 +19,7 @@ struct AddEventPopupView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack{
+                Rectangle()
                 VStack(alignment: .center){
                     VStack(alignment: .leading){
                         
@@ -29,6 +30,7 @@ struct AddEventPopupView: View {
                             .background(Color.black)
                             .cornerRadius(25)
                             .padding(.top, 5)
+                            .padding(.leading, -30)
                 
                             Text("Title:")
                                 .padding(.top, 10)
@@ -46,6 +48,7 @@ struct AddEventPopupView: View {
                             .padding(.bottom, -5)
                         TextField("description", text: $description)
                             .padding(.leading, 10)
+                            .multilineTextAlignment(.leading)
                             .frame(width: 160, height: 60, alignment: .leading)
                             .background(Color.gray)
                             .cornerRadius(5)
@@ -82,9 +85,10 @@ struct AddEventPopupView: View {
                     }).frame(width: 100, height: 30, alignment: .center)
                     .background(Color.green)
                     .padding(.bottom, 20)
+                    .cornerRadius(5)
                     
                 }.padding(.vertical, 10)
-                .padding(.horizontal, 20)
+                .padding(.horizontal, 40)
                 .background(Color.white)
                 .cornerRadius(15)
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)

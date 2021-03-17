@@ -26,12 +26,11 @@ struct RemoveEventPopupView: View {
                         .background(Color.black)
                         .cornerRadius(25)
                         .padding(.trailing, 40)
-                        .padding(.top, 5)
             
                         
                         Text("Select an event")
                             .font(.title2)
-                            .padding(.top, 20)
+                            .padding(.top, 60)
                             .padding(.bottom, 10)
                             .padding(.trailing, 70)
                     }.padding(.bottom, 8)
@@ -46,7 +45,7 @@ struct RemoveEventPopupView: View {
                             DeleteEventButtonView(viewModel: viewModel, itineraryToDelete: currentItinerary)
                         }
                     }.frame(width: 240, height: 280, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 10)
                     .padding(.top, 10)
                     .background(Color.gray)
                     .cornerRadius(15)
