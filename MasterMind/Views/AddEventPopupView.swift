@@ -13,6 +13,8 @@ struct AddEventPopupView: View {
     
     @State var title: String = "new title"
     @State var description: String = "new description"
+    @State var hours: String = "h"
+    @State var minutes: String = "m"
     
     var body: some View {
         GeometryReader { geometry in
@@ -30,6 +32,7 @@ struct AddEventPopupView: View {
                 
                             Text("Title:")
                                 .padding(.top, 10)
+                                .padding(.bottom, -5)
 
                         TextField("title", text: $title)
                             .padding(.leading, 10)
@@ -37,21 +40,45 @@ struct AddEventPopupView: View {
                             .background(Color.gray)
                             .cornerRadius(5)
                             .foregroundColor(.white)
-                            .padding(.bottom, 35.0)
+                            .padding(.bottom, 8)
                         
                         Text("Description:")
+                            .padding(.bottom, -5)
                         TextField("description", text: $description)
                             .padding(.leading, 10)
                             .frame(width: 160, height: 60, alignment: .leading)
                             .background(Color.gray)
                             .cornerRadius(5)
                             .foregroundColor(.white)
-                            .padding(.bottom, 45.0)
+                            .padding(.bottom, 8)
+                        
+                        Text("Time: (24h)")
+                            .padding(.bottom, -5)
+                        HStack(alignment: .center){
+                            TextField("h", text: $hours)
+                                .padding(.leading, 10)
+                                .frame(width: 40, height: 30, alignment: .center)
+                                .background(Color.gray)
+                                .cornerRadius(5)
+                                .foregroundColor(.white)
+                                .keyboardType(.numberPad)
+                                .padding(.leading, 30)
                             
+                            Text(":")
+                            
+                            TextField("m", text: $minutes)
+                                .padding(.leading, 10)
+                                .frame(width: 40, height: 30, alignment: .center)
+                                .background(Color.gray)
+                                .cornerRadius(5)
+                                .foregroundColor(.white)
+                                .keyboardType(.numberPad)
+                        }.padding(.bottom, 25.0)
+                                    
                     }
                     
                     Button("Add event", action :{
-                        viewModel.AddNewItineraryToDay(title : title, description: description)
+                        viewModel.AddNewItineraryToDay(title : title, description: description, hours : hours, minutes : minutes)
                     }).frame(width: 100, height: 30, alignment: .center)
                     .background(Color.green)
                     .padding(.bottom, 20)

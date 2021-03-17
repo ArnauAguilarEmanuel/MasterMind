@@ -15,7 +15,7 @@ class ViewModel : ObservableObject {
     @Published var selectedDay : DayModel
     
     var testItineraries = [
-        ItineraryModel(title: "BCN", description: "Road trip to Sagrada Familia", imageName: "SagradaFamilia", time: 4839),
+        ItineraryModel(title: "BCN", description: "Road trip to Sagrada Familia", imageName: "SagradaFamilia", time: 839),
         ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 825),
         ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 580),
         ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 1079),
@@ -44,8 +44,9 @@ class ViewModel : ObservableObject {
         showRemoveEventPopUp.toggle()
     }
     
-    func AddNewItineraryToDay(title : String, description : String){
-        selectedDay.itineraries.append(ItineraryModel(title: title, description: description , imageName: "SagradaFamilia", time: 4879))
+    func AddNewItineraryToDay(title : String, description : String, hours: String, minutes : String){
+        let time = UInt(hours)! * 60 + UInt(minutes)!
+        selectedDay.itineraries.append(ItineraryModel(title: title, description: description , imageName: "SagradaFamilia", time: time))
         showAddEventPopUp.toggle()
     }
     
