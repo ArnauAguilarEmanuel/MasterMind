@@ -17,7 +17,6 @@ struct RemoveEventPopupView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack{
-                
                 VStack(alignment: .center){
                     HStack{
                         Button("X", action:{
@@ -38,21 +37,27 @@ struct RemoveEventPopupView: View {
                     }.padding(.bottom, 8)
                 
                     Text("The selected event will be removed permanently")
+                        .multilineTextAlignment(.center)
                         .padding(.bottom, 20)
+                        .frame(width: 220.0, alignment: .center)
                     
                     ScrollView {
                         ForEach(viewModel.selectedDay.itineraries, id: \.self){ currentItinerary in
                             DeleteEventButtonView(viewModel: viewModel, itineraryToDelete: currentItinerary)
                         }
-                    }
+                    }.frame(width: 240, height: 280, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .padding(.bottom, 20)
+                    .padding(.top, 10)
+                    .background(Color.gray)
+                    .cornerRadius(15)
                                                             
-                }.padding(.vertical, 10)
-                .padding(.horizontal, 20)
+                }
+                .padding(.bottom, 20)
+                .padding(.horizontal, 5)
                 .background(Color.white)
                 .cornerRadius(15)
+                .padding(.horizontal, 15)
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                
-                
             }
         }
     }
