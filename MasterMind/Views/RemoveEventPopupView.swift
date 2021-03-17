@@ -17,29 +17,42 @@ struct RemoveEventPopupView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack{
+                
                 VStack(alignment: .center){
-                    VStack(alignment: .center){
+                    HStack{
+                        Button("X", action:{
+                            viewModel.CloseRemoveItineraryPopup()
+                        }).foregroundColor(.white)
+                        .frame(width: 25, height: 25, alignment: .center)
+                        .background(Color.black)
+                        .cornerRadius(25)
+                        .padding(.trailing, 40)
+                        .padding(.top, 5)
+            
+                        
                         Text("Select an event")
+                            .font(.title2)
                             .padding(.top, 20)
-                            .padding(.bottom, 30)
+                            .padding(.bottom, 10)
+                            .padding(.trailing, 70)
+                    }.padding(.bottom, 8)
+                
+                    Text("The selected event will be removed permanently")
+                        .padding(.bottom, 20)
                     
-                        Text("The selected event will be removed permanently")
-                            .padding(.bottom, 20)
+                    ScrollView {
+                        ForEach(viewModel.selectedDay.itineraries, id: \.self){ currentItinerary in
+                            DeleteEventButtonView(viewModel: viewModel, itineraryToDelete: currentItinerary)
+                        }
                     }
-                    
-                    Button("Remove", action :{
-                        viewModel.RemoveItineraryToDay(day : viewModel.selectedDay)
-                    }).frame(width: 100, height: 30, alignment: .center)
-                    .background(Color.red)
-                    .foregroundColor(.white)
-                    .cornerRadius(5)
-                    .padding(.bottom, 20)
-                    
+                                                            
                 }.padding(.vertical, 10)
                 .padding(.horizontal, 20)
                 .background(Color.white)
                 .cornerRadius(15)
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                
+                
             }
         }
     }

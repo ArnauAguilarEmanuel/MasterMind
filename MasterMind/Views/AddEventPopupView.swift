@@ -19,9 +19,18 @@ struct AddEventPopupView: View {
             ZStack{
                 VStack(alignment: .center){
                     VStack(alignment: .leading){
-                        Text("Title:")
-                            .padding(.top, 20)
                         
+                            Button("X", action:{
+                                viewModel.CloseAddItineraryPopup()
+                            }).foregroundColor(.white)
+                            .frame(width: 25, height: 25, alignment: .center)
+                            .background(Color.black)
+                            .cornerRadius(25)
+                            .padding(.top, 5)
+                
+                            Text("Title:")
+                                .padding(.top, 10)
+
                         TextField("title", text: $title)
                             .padding(.leading, 10)
                             .frame(width: 160, height: 30, alignment: .leading)

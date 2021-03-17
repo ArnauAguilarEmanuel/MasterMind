@@ -49,8 +49,24 @@ class ViewModel : ObservableObject {
         showAddEventPopUp.toggle()
     }
     
-    func RemoveItineraryToDay(day : DayModel){
-        print("Reomve")
+    func RemoveItineraryToDay(itineraryToDelete : ItineraryModel){
+        var index = 0
+        for currentitinerary in selectedDay.itineraries{
+            if(currentitinerary == itineraryToDelete){
+                selectedDay.itineraries.remove(at: index)
+                break
+            }
+            index+=1
+        }
+        showRemoveEventPopUp.toggle()
+    }
+    
+    func CloseRemoveItineraryPopup(){
+        showRemoveEventPopUp.toggle()
+    }
+    
+    func CloseAddItineraryPopup(){
+        showAddEventPopUp.toggle()
     }
     
 }

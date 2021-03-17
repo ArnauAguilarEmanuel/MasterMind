@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		492358A9260256540048B939 /* RemoveEventPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492358A8260256540048B939 /* RemoveEventPopupView.swift */; };
+		492358AD260260240048B939 /* DeleteEventButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492358AC260260240048B939 /* DeleteEventButtonView.swift */; };
 		49F75F9826011ADF00FB70CA /* AddEventPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F75F9726011ADF00FB70CA /* AddEventPopupView.swift */; };
 		EF19FB5D25FA96040003FBC7 /* ItinerariModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF19FB5C25FA96040003FBC7 /* ItinerariModel.swift */; };
 		EF19FB6125FA99960003FBC7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6607A25F7EF5900EB4CB9 /* ViewModel.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		492358A8260256540048B939 /* RemoveEventPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveEventPopupView.swift; sourceTree = "<group>"; };
+		492358AC260260240048B939 /* DeleteEventButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteEventButtonView.swift; sourceTree = "<group>"; };
 		49F75F9726011ADF00FB70CA /* AddEventPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventPopupView.swift; sourceTree = "<group>"; };
 		EF19FB5C25FA96040003FBC7 /* ItinerariModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinerariModel.swift; sourceTree = "<group>"; };
 		EF19FB6525FA9F7E0003FBC7 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				EF19FB6525FA9F7E0003FBC7 /* DayView.swift */,
 				49F75F9726011ADF00FB70CA /* AddEventPopupView.swift */,
 				492358A8260256540048B939 /* RemoveEventPopupView.swift */,
+				492358AC260260240048B939 /* DeleteEventButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			files = (
 				49F75F9826011ADF00FB70CA /* AddEventPopupView.swift in Sources */,
 				EFD7827525FA8F5600E790BC /* ItineraryView.swift in Sources */,
+				492358AD260260240048B939 /* DeleteEventButtonView.swift in Sources */,
 				492358A9260256540048B939 /* RemoveEventPopupView.swift in Sources */,
 				EF19FB6625FA9F7E0003FBC7 /* DayView.swift in Sources */,
 				EF19FB6925FAA3260003FBC7 /* DayModel.swift in Sources */,
