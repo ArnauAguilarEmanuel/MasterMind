@@ -22,9 +22,11 @@ struct ItineraryView: View, Hashable {
                     Text(title)
                         .font(.title)
                         .foregroundColor(.white)
-                        .frame(width: 200, alignment: .leading)
+                        .frame(width: 160, alignment: .leading)
                         .padding(.leading, 10)
                     Text(textTime)
+                        .font(.footnote)
+                        .foregroundColor(.white)
                         
                     
                 }.padding(.bottom, 6)
