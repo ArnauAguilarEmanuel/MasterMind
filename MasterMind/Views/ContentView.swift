@@ -24,6 +24,11 @@ struct ContentView: View {
                     AddEventPopupView(viewModel: viewModel)
                 }.background(Color.black.opacity(0.75))
             }
+            else if viewModel.showRemoveEventPopUp{
+                GeometryReader{_ in
+                    AddEventPopupView(viewModel: viewModel)
+                }.background(Color.black.opacity(0.75))
+            }
         }
     }
 }

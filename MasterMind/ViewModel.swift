@@ -10,6 +10,7 @@ import Foundation
 class ViewModel : ObservableObject {
     @Published var days: [DayModel]
     @Published var showAddEventPopUp = false
+    @Published var showRemoveEventPopUp = false
     
     @Published var selectedDay : DayModel
     
@@ -38,10 +39,18 @@ class ViewModel : ObservableObject {
         showAddEventPopUp.toggle()
     }
     
+    func OpenRemoveItineraryPopup( day : DayModel){
+        selectedDay = day
+        showRemoveEventPopUp.toggle()
+    }
+    
     func AddNewItineraryToDay(title : String, description : String){
         selectedDay.itineraries.append(ItineraryModel(title: title, description: description , imageName: "SagradaFamilia"))
         showAddEventPopUp.toggle()
     }
     
+    func RemoveItineraryToDay(){
+        print("Reomve")
+    }
     
 }
