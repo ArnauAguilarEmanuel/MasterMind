@@ -19,19 +19,29 @@ struct ItineraryView: View, Hashable {
             VStack(alignment: .leading){
                 Text(title)
                     .font(.title)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(.white)
                     .multilineTextAlignment(.leading)
+                    .padding(.leading, 10)
+                    .padding(.bottom, 6)
                 Text(description)
                     .font(.subheadline)
                     .multilineTextAlignment(.leading)
-            }
-            .padding(.trailing, 100.0)
+                    .padding(.leading, 10)
+                    .foregroundColor(.white)
+            }.frame(minWidth: 190, idealWidth: 220, maxWidth: 220, minHeight: 60, idealHeight: 60, maxHeight: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             Image(imageName)
                 .resizable()
-                .frame(width: 50.0, height: 50.0)
+                .frame(width: 50.0, height: 50.0, alignment: .center)
                 .scaledToFit()
+                .padding(.trailing, 6)
+                .padding(.top, 15)
         }
+        .padding(.bottom, 20)
+        .padding(.top, 5)
+        .background(Color.gray)
+        .cornerRadius(10)
+        
     }
 }
 

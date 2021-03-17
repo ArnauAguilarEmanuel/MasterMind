@@ -14,7 +14,6 @@ struct ContentView: View {
     @ObservedObject var viewModel = ViewModel()
     var body: some View {
         ZStack{
-            
             List {
                 ForEach(viewModel.days, id: \.self){ currentDay in
                     DayView( day: currentDay, viewModel: viewModel)
@@ -24,8 +23,6 @@ struct ContentView: View {
                 GeometryReader{_ in
                     AddEventPopupView(viewModel: viewModel)
                 }.background(Color.black.opacity(0.75))
-                
-                
             }
         }
     }
