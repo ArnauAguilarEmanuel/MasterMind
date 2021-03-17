@@ -12,17 +12,23 @@ struct ItineraryView: View, Hashable {
     var title : String
     var description : String
     var imageName : String
+    var textTime : String
     
     
     var body: some View {
         HStack{
             VStack(alignment: .leading){
-                Text(title)
-                    .font(.title)
-                    .foregroundColor(.white)
-                    .frame(width: 200, alignment: .leading)
-                    .padding(.leading, 10)
-                    .padding(.bottom, 6)
+                HStack{
+                    Text(title)
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .frame(width: 200, alignment: .leading)
+                        .padding(.leading, 10)
+                    Text(textTime)
+                        
+                    
+                }.padding(.bottom, 6)
+                
                 Text(description)
                     .font(.subheadline)
                     .foregroundColor(.white)
@@ -48,6 +54,6 @@ struct ItineraryView: View, Hashable {
 
 struct ItineraryView_Previews: PreviewProvider {
     static var previews: some View {
-        ItineraryView(title: "Itinerary Title", description: "Itinerary Title", imageName: "SagradaFamilia")
+        ItineraryView(title: "Itinerary Title", description: "Itinerary Title", imageName: "SagradaFamilia", textTime: "17:30")
     }
 }

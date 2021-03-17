@@ -25,6 +25,6 @@ struct DeleteEventButtonView: View {
 
 struct DeleteEventButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        DeleteEventButtonView(viewModel: ViewModel(), itineraryToDelete: ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"))
+        DeleteEventButtonView(viewModel: ViewModel(), itineraryToDelete: ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 4829))
     }
 }

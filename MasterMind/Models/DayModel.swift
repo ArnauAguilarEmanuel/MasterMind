@@ -14,6 +14,8 @@ class DayModel : Hashable , ObservableObject{
     var month : String
     var year : Int
     
+    
+    
     init(itineraries: [ItineraryModel], day: Int, month : String, year : Int) {
         self.itineraries  = itineraries
         self.day = day
@@ -24,6 +26,7 @@ class DayModel : Hashable , ObservableObject{
     func GetDate() -> String{
         return  String(self.day) + "/" + self.month + "/" + String(self.year)
     }
+
 }
 
 extension Hashable where Self: AnyObject{

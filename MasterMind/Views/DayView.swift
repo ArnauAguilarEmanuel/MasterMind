@@ -41,7 +41,7 @@ struct DayView: View {
                 }.padding(.vertical, 20)
 
                 ForEach(day.itineraries, id: \.self){ itinerary in
-                    ItineraryView(title: itinerary.title, description: itinerary.description, imageName: itinerary.imageName)
+                    ItineraryView(title: itinerary.title, description: itinerary.description, imageName: itinerary.imageName, textTime: itinerary.GetDisplayTime())
                 }
             }
         }
@@ -51,11 +51,11 @@ struct DayView: View {
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
         let testItineraries = [
-            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
-            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
-            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
-            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia"),
-            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia")
+            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 4830),
+            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 1827),
+            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 4890),
+            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 6815),
+            ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 2878)
         ]
         DayView(day: DayModel(itineraries: testItineraries, day: 1, month: "March", year: 2020), viewModel: ViewModel())
     }
