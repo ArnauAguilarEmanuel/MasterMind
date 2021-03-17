@@ -16,7 +16,9 @@ struct ItineraryModel: Hashable{
     var time : UInt
     
     func GetDisplayTime() -> String{
-        return String(time / 60) + ":" +  String(time % 60)
+        return ((time/60 < 10) ? "0" + String(time/60) : String(time/60))
+            + ":" +
+            ((time%60 < 10) ? "0" + String(time%60) : String(time%60))
             
     }
 }
