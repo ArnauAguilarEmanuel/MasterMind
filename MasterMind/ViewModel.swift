@@ -15,9 +15,9 @@ class ViewModel : ObservableObject {
     @Published var selectedDay : DayModel
     
     var testItineraries = [
-        ItineraryModel(title: "Parc Guell", description: "Road trip to Parc Güell", imageName: "SagradaFamilia", time: 839),
+        ItineraryModel(title: "Parc Güell", description: "Road trip to Parc Güell", imageName: "SagradaFamilia", time: 839),
         ItineraryModel(title: "Sagrada Familia", description: "Visit the sagrada Familia", imageName: "SagradaFamilia", time: 1025),
-        ItineraryModel(title: "Monjuic", description: "Excursion to Monjuic", imageName: "SagradaFamilia", time: 580),
+        ItineraryModel(title: "Monjuïc", description: "Excursion to Monjuïc", imageName: "SagradaFamilia", time: 580),
         ItineraryModel(title: "Bunkers", description: "Climb t the bunkers of BCN", imageName: "SagradaFamilia", time: 1079),
         ItineraryModel(title: "La Gastronomica", description: "Dinner in a restaurant", imageName: "SagradaFamilia", time: 6600)
     ]
