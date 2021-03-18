@@ -76,16 +76,15 @@ struct AddEventPopupView: View {
                                 .cornerRadius(5)
                                 .foregroundColor(.white)
                                 .keyboardType(.numberPad)
-                        }.padding(.bottom, 25.0)
-                                    
+                        }.padding(.bottom, 25.0)                                
                     }
                     
                     Button("Add event", action :{
                         viewModel.AddNewItineraryToDay(title : title, description: description, hours : hours, minutes : minutes)
                     }).frame(width: 100, height: 30, alignment: .center)
-                    .background(Color.green)
-                    .padding(.bottom, 20)
+                    .background(Color.green)                    
                     .cornerRadius(5)
+                    .padding(.bottom, 20)
                     
                 }.padding(.vertical, 10)
                 .padding(.horizontal, 40)

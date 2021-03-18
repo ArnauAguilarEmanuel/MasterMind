@@ -15,11 +15,11 @@ class ViewModel : ObservableObject {
     @Published var selectedDay : DayModel
     
     var testItineraries = [
-        ItineraryModel(title: "BCN", description: "Road trip to Sagrada Familia", imageName: "SagradaFamilia", time: 839),
-        ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 825),
-        ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 580),
-        ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 1079),
-        ItineraryModel(title: "Title1", description: "Description1", imageName: "SagradaFamilia", time: 929)
+        ItineraryModel(title: "Parc Guell", description: "Road trip to Parc Güell", imageName: "SagradaFamilia", time: 839),
+        ItineraryModel(title: "Sagrada Familia", description: "Visit the sagrada Familia", imageName: "SagradaFamilia", time: 1025),
+        ItineraryModel(title: "Monjuic", description: "Excursion to Monjuic", imageName: "SagradaFamilia", time: 580),
+        ItineraryModel(title: "Bunkers", description: "Climb t the bunkers of BCN", imageName: "SagradaFamilia", time: 1079),
+        ItineraryModel(title: "La Gastronomica", description: "Dinner in a restaurant", imageName: "SagradaFamilia", time: 6600)
     ]
     
     init() {
@@ -31,7 +31,17 @@ class ViewModel : ObservableObject {
             DayModel(itineraries: testItineraries, day: 4, month: "September", year: 2021),
             DayModel(itineraries: testItineraries, day: 5, month: "September", year: 2021)
         ]
+        
+        
         self.selectedDay = DayModel(itineraries: testItineraries, day: 1, month: "September", year: 2021)
+        
+        days.forEach { (day) in
+            SortItinenariesByTime(itinenaries: &day.itineraries)
+        }
+        
+        SortItinenariesByTime(itinenaries: &selectedDay.itineraries)
+        
+        
     }
     
     func OpenNewItineraryPopup( day : DayModel){
@@ -47,7 +57,23 @@ class ViewModel : ObservableObject {
     func AddNewItineraryToDay(title : String, description : String, hours: String, minutes : String){
         let time = UInt(hours)! * 60 + UInt(minutes)!
         selectedDay.itineraries.append(ItineraryModel(title: title, description: description , imageName: "SagradaFamilia", time: time))
+        SortItinenariesByTime(itinenaries: &selectedDay.itineraries)
         showAddEventPopUp.toggle()
+    }
+    
+    func SortItinenariesByTime(itinenaries : inout [ItineraryModel]){
+    
+        var temp : ItineraryModel
+        
+        for i in 0 ..< (itinenaries.count){
+            for j in 0 ..< (itinenaries.count - i - 1){
+                if(itinenaries[j].time > itinenaries[j+1].time){
+                    temp = itinenaries[j]
+                    itinenaries[j] = itinenaries[j+1]
+                    itinenaries[j+1] = temp
+                }
+            }
+        }
     }
     
     func RemoveItineraryToDay(itineraryToDelete : ItineraryModel){
